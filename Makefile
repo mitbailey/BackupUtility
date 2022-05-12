@@ -9,7 +9,7 @@ TARGET = backup.out
 
 all: $(COBJS) $(CPPOBJS)
 	$(CXX) $(EDCXXFLAGS) $(COBJS) $(CPPOBJS) -o $(TARGET) $(EDLDFLAGS)
-	sudo ./$(TARGET)
+	# ./$(TARGET)
 
 %.o: %.cpp
 	$(CXX) $(EDCXXFLAGS) -o $@ -c $<
@@ -25,6 +25,3 @@ clean:
 	$(RM) src/*.o
 
 .PHONY: spotless
-
-spotless:
-	$(RM) drivers/*.o
