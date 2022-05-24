@@ -4,7 +4,7 @@ CPPOBJS = src/backup.o
 COBJS =
 EDCXXFLAGS = -I ./ -I ./include/ -Wall -pthread -std=gnu++17 $(CXXFLAGS)
 EDCFLAGS = $(CFLAGS)
-EDLDFLAGS := -lstdc++fs $(LDFLAGS)
+EDLDFLAGS := -lstdc++fs -static-libgcc -static-libstdc++ $(LDFLAGS)
 TARGET = backup.out
 
 all: $(COBJS) $(CPPOBJS)
